@@ -1,0 +1,47 @@
+---
+
+- name: configuration
+  hosts: all
+  gather_facts: true 
+  become: true
+  tasks:
+  - name: enable repos
+    template:
+      src: ./open_three-tier-app.repo
+      dest: /etc/yum.repos.d/open_three-tier-app.repo
+      mode: 0644
+- name: deploy postgres
+  hosts: db
+  gather_facts: false
+  vars:
+    postgresql_database: example_db
+    postgresql_install_user: postgres
+    postgresql_install_group: postgres
+    postgresql_data_dir: "/var/lib/pgsql/data"
+  become: true
+  tasks:
+  - name: Ensure PostgreSQL data directory exists.
+    file:
+      path: "{{ postgresql_data_dir }}"
+      owner: "{{ postgresql_install_user }}"
+      group: "{{ postgresql_install_group }}"
+      state: directory
+      mode: 0700
+  - name: Check if PostgreSQL database is initialized.
+    stat:
+      path: "{{ postgresql_data_dir }}/PG_VERSION"
+    register: pgdata_dir_version
+  - name: Ensure PostgreSQL database is initialized.
+    command: "initdb -D {{ postgresql_data_dir }}"
+    when: not pgdata_dir_version.stat.exists
+    become: yes
+    become_user: "{{ postgresql_user }}"
+    vars:
+      ansible_ssh_pipelining: true
+  - name: start postgres
+    service:
+      name: postgresql.service
+      state: started
+  - name: tell user to finish setting up postgres
+    debug:
+      msg: "Hurray!!"

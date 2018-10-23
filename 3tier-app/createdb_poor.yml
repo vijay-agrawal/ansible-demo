@@ -1,0 +1,38 @@
+---
+
+- name: configuration
+  hosts: all
+  gather_facts: true 
+  become: true
+  tasks:
+  - name: enable repos
+    template:
+      src: ./open_three-tier-app.repo
+      dest: /etc/yum.repos.d/open_three-tier-app.repo
+      mode: 0644
+- name: deploy postgres
+  hosts: db
+  gather_facts: false
+  become: true
+  tasks:
+  - name: install postgres
+    yum:
+      name: postgresql-server
+      state: latest
+  - name: enable postgresql
+    service:
+      name: postgresql.service
+      enabled: yes
+# following two commands are needed only when you run this first time
+# when playbook is run again, comment these commands else playbook will fail
+#    - name: initilize postgres
+#      command: postgresql-setup initdb
+#    - name: initilize postgres some more
+#      command: chkconfig postgresql on
+  - name: start postgres
+    service:
+      name: postgresql.service
+      state: started
+  - name: tell user to finish setting up postgres
+    debug:
+      msg: "Either uncomment the postgres setup or manually login and initialize"

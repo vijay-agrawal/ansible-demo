@@ -1,0 +1,43 @@
+---
+
+- name: configuration
+  hosts: all
+  gather_facts: true 
+  become: true
+  tasks:
+  - name: enable repos
+    template:
+      src: ./open_three-tier-app.repo
+      dest: /etc/yum.repos.d/open_three-tier-app.repo
+      mode: 0644
+- name: deploy postgres
+  hosts: db
+  gather_facts: false
+  become: true
+  tasks:
+  - name: install postgres
+    yum:
+      name: postgresql-server
+      state: latest
+  - name: enable postgresql
+    service:
+      name: postgresql.service
+      enabled: yes
+# following two commands are needed only when you run this first time
+# when playbook is run again, use -skip-tags "postgre-onetime"
+  - name: initilize postgres
+    command: postgresql-setup initdb
+    tags:
+      - postgre-onetime
+      - tag2
+  - name: initilize postgres some more
+    command: chkconfig postgresql on
+    tags:
+      - postgre-onetime
+  - name: start postgres
+    service:
+      name: postgresql.service
+      state: started
+  - name: tell user to finish setting up postgres
+    debug:
+      msg: "Hurray!!"

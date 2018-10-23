@@ -1,0 +1,24 @@
+---
+
+- name: Ensure PostgreSQL data directory exists.
+  file:
+    path: "{{ postgresql_data_dir }}"
+    owner: "{{ postgresql_install_user }}"
+    group: "{{ postgresql_install_group }}"
+    state: directory
+    mode: 0700
+- name: Check if PostgreSQL database is initialized.
+  stat:
+    path: "{{ postgresql_data_dir }}/PG_VERSION"
+  register: pgdata_dir_version
+- name: Ensure PostgreSQL database is initialized.
+  command: "initdb -D {{ postgresql_data_dir }}"
+  when: not pgdata_dir_version.stat.exists
+  become: yes
+  become_user: "{{ postgresql_user }}"
+  vars:
+    ansible_ssh_pipelining: true
+- name: start postgres
+  service:
+    name: postgresql.service
+    state: started

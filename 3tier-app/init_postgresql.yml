@@ -1,0 +1,6 @@
+# postgre db initialization - one time, executed conditionally
+---
+- name: initilize postgres
+  command: postgresql-setup initdb
+- name: initilize postgres some more
+    command: chkconfig postgresql on
