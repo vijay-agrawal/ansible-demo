@@ -1,0 +1,1523 @@
+    {
+
+        "changed": false, 
+
+        "failed": false, 
+
+        "instances": [
+
+            {
+
+                "ami_launch_index": 0, 
+
+                "architecture": "x86_64", 
+
+                "block_device_mappings": [
+
+                    {
+
+                        "device_name": "/dev/sda1", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-0fefe8fd78e3a3e9f"
+
+                        }
+
+                    }, 
+
+                    {
+
+                        "device_name": "/dev/xvdb", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-05472e145c5ebe6ed"
+
+                        }
+
+                    }
+
+                ], 
+
+                "client_token": "three-appdb-1SYXS56LSJNVL", 
+
+                "cpu_options": {
+
+                    "core_count": 1, 
+
+                    "threads_per_core": 1
+
+                }, 
+
+                "ebs_optimized": false, 
+
+                "ena_support": true, 
+
+                "hypervisor": "xen", 
+
+                "image_id": "ami-c998b6b2", 
+
+                "instance_id": "i-07b1354a0373c2975", 
+
+                "instance_type": "t2.small", 
+
+                "key_name": "ocpkey", 
+
+                "launch_time": "2018-10-24T03:58:49+00:00", 
+
+                "monitoring": {
+
+                    "state": "disabled"
+
+                }, 
+
+                "network_interfaces": [
+
+                    {
+
+                        "association": {
+
+                            "ip_owner_id": "719622469867", 
+
+                            "public_dns_name": "ec2-35-175-27-44.compute-1.amazonaws.com", 
+
+                            "public_ip": "35.175.27.44"
+
+                        }, 
+
+                        "attachment": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "attachment_id": "eni-attach-04424f207c30e4a00", 
+
+                            "delete_on_termination": true, 
+
+                            "device_index": 0, 
+
+                            "status": "attached"
+
+                        }, 
+
+                        "description": "", 
+
+                        "groups": [
+
+                            {
+
+                                "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                                "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                            }
+
+                        ], 
+
+                        "ipv6_addresses": [], 
+
+                        "mac_address": "02:34:b6:0c:20:92", 
+
+                        "network_interface_id": "eni-063a47fea32e282d5", 
+
+                        "owner_id": "719622469867", 
+
+                        "private_dns_name": "ip-192-199-0-76.ec2.internal", 
+
+                        "private_ip_address": "192.199.0.76", 
+
+                        "private_ip_addresses": [
+
+                            {
+
+                                "association": {
+
+                                    "ip_owner_id": "719622469867", 
+
+                                    "public_dns_name": "ec2-35-175-27-44.compute-1.amazonaws.com", 
+
+                                    "public_ip": "35.175.27.44"
+
+                                }, 
+
+                                "primary": true, 
+
+                                "private_dns_name": "ip-192-199-0-76.ec2.internal", 
+
+                                "private_ip_address": "192.199.0.76"
+
+                            }
+
+                        ], 
+
+                        "source_dest_check": true, 
+
+                        "status": "in-use", 
+
+                        "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                        "vpc_id": "vpc-0031d5c8cf211367b"
+
+                    }
+
+                ], 
+
+                "placement": {
+
+                    "availability_zone": "us-east-1a", 
+
+                    "group_name": "", 
+
+                    "tenancy": "default"
+
+                }, 
+
+                "private_dns_name": "ip-192-199-0-76.ec2.internal", 
+
+                "private_ip_address": "192.199.0.76", 
+
+                "product_codes": [], 
+
+                "public_dns_name": "ec2-35-175-27-44.compute-1.amazonaws.com", 
+
+                "public_ip_address": "35.175.27.44", 
+
+                "root_device_name": "/dev/sda1", 
+
+                "root_device_type": "ebs", 
+
+                "security_groups": [
+
+                    {
+
+                        "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                        "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                    }
+
+                ], 
+
+                "source_dest_check": true, 
+
+                "state": {
+
+                    "code": 16, 
+
+                    "name": "running"
+
+                }, 
+
+                "state_transition_reason": "", 
+
+                "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                "tags": {
+
+                    "AnsibleGroup": "appdbs", 
+
+                    "Name": "appdb1", 
+
+                    "Project": "three-tier-app-3f95", 
+
+                    "Stack": "project three-tier-app-3f95", 
+
+                    "aws:cloudformation:logical-id": "appdb1", 
+
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:719622469867:stack/three-tier-app-3f95/035fdba0-d741-11e8-b94e-500c28b27a35", 
+
+                    "aws:cloudformation:stack-name": "three-tier-app-3f95", 
+
+                    "instance_filter": "three-tier-app-psrivast@redhat.com", 
+
+                    "internaldns": "appdb1.3f95.internal", 
+
+                    "ostype": "rhel", 
+
+                    "owner": "psrivast@redhat.com", 
+
+                    "three-tier-app-3f95": "appdb"
+
+                }, 
+
+                "virtualization_type": "hvm", 
+
+                "vpc_id": "vpc-0031d5c8cf211367b"
+
+            }, 
+
+            {
+
+                "ami_launch_index": 0, 
+
+                "architecture": "x86_64", 
+
+                "block_device_mappings": [
+
+                    {
+
+                        "device_name": "/dev/sda1", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-04baa25016da531ab"
+
+                        }
+
+                    }, 
+
+                    {
+
+                        "device_name": "/dev/xvdb", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-06f5a7b49bb5cfeca"
+
+                        }
+
+                    }
+
+                ], 
+
+                "client_token": "three-suppo-1EE93LR9BTAPR", 
+
+                "cpu_options": {
+
+                    "core_count": 1, 
+
+                    "threads_per_core": 1
+
+                }, 
+
+                "ebs_optimized": false, 
+
+                "ena_support": true, 
+
+                "hypervisor": "xen", 
+
+                "image_id": "ami-c998b6b2", 
+
+                "instance_id": "i-088f5d4af76b50ca2", 
+
+                "instance_type": "t2.small", 
+
+                "key_name": "ocpkey", 
+
+                "launch_time": "2018-10-24T03:58:49+00:00", 
+
+                "monitoring": {
+
+                    "state": "disabled"
+
+                }, 
+
+                "network_interfaces": [
+
+                    {
+
+                        "association": {
+
+                            "ip_owner_id": "719622469867", 
+
+                            "public_dns_name": "ec2-34-192-201-180.compute-1.amazonaws.com", 
+
+                            "public_ip": "34.192.201.180"
+
+                        }, 
+
+                        "attachment": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "attachment_id": "eni-attach-0ed7da433217335b0", 
+
+                            "delete_on_termination": true, 
+
+                            "device_index": 0, 
+
+                            "status": "attached"
+
+                        }, 
+
+                        "description": "", 
+
+                        "groups": [
+
+                            {
+
+                                "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                                "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                            }
+
+                        ], 
+
+                        "ipv6_addresses": [], 
+
+                        "mac_address": "02:73:af:43:29:86", 
+
+                        "network_interface_id": "eni-0f0ecb7e284895761", 
+
+                        "owner_id": "719622469867", 
+
+                        "private_dns_name": "ip-192-199-0-60.ec2.internal", 
+
+                        "private_ip_address": "192.199.0.60", 
+
+                        "private_ip_addresses": [
+
+                            {
+
+                                "association": {
+
+                                    "ip_owner_id": "719622469867", 
+
+                                    "public_dns_name": "ec2-34-192-201-180.compute-1.amazonaws.com", 
+
+                                    "public_ip": "34.192.201.180"
+
+                                }, 
+
+                                "primary": true, 
+
+                                "private_dns_name": "ip-192-199-0-60.ec2.internal", 
+
+                                "private_ip_address": "192.199.0.60"
+
+                            }
+
+                        ], 
+
+                        "source_dest_check": true, 
+
+                        "status": "in-use", 
+
+                        "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                        "vpc_id": "vpc-0031d5c8cf211367b"
+
+                    }
+
+                ], 
+
+                "placement": {
+
+                    "availability_zone": "us-east-1a", 
+
+                    "group_name": "", 
+
+                    "tenancy": "default"
+
+                }, 
+
+                "private_dns_name": "ip-192-199-0-60.ec2.internal", 
+
+                "private_ip_address": "192.199.0.60", 
+
+                "product_codes": [], 
+
+                "public_dns_name": "ec2-34-192-201-180.compute-1.amazonaws.com", 
+
+                "public_ip_address": "34.192.201.180", 
+
+                "root_device_name": "/dev/sda1", 
+
+                "root_device_type": "ebs", 
+
+                "security_groups": [
+
+                    {
+
+                        "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                        "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                    }
+
+                ], 
+
+                "source_dest_check": true, 
+
+                "state": {
+
+                    "code": 16, 
+
+                    "name": "running"
+
+                }, 
+
+                "state_transition_reason": "", 
+
+                "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                "tags": {
+
+                    "AnsibleGroup": "support", 
+
+                    "Name": "support1", 
+
+                    "Project": "three-tier-app-3f95", 
+
+                    "Stack": "project three-tier-app-3f95", 
+
+                    "aws:cloudformation:logical-id": "support1", 
+
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:719622469867:stack/three-tier-app-3f95/035fdba0-d741-11e8-b94e-500c28b27a35", 
+
+                    "aws:cloudformation:stack-name": "three-tier-app-3f95", 
+
+                    "instance_filter": "three-tier-app-psrivast@redhat.com", 
+
+                    "internaldns": "support1.3f95.internal", 
+
+                    "ostype": "rhel", 
+
+                    "owner": "psrivast@redhat.com", 
+
+                    "three-tier-app-3f95": "support"
+
+                }, 
+
+                "virtualization_type": "hvm", 
+
+                "vpc_id": "vpc-0031d5c8cf211367b"
+
+            }, 
+
+            {
+
+                "ami_launch_index": 0, 
+
+                "architecture": "x86_64", 
+
+                "block_device_mappings": [
+
+                    {
+
+                        "device_name": "/dev/sda1", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-0dc67d0420bd4fc78"
+
+                        }
+
+                    }, 
+
+                    {
+
+                        "device_name": "/dev/xvdb", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-027e24cd129242e5f"
+
+                        }
+
+                    }
+
+                ], 
+
+                "client_token": "three-app1-98D4ZZFXPD0R", 
+
+                "cpu_options": {
+
+                    "core_count": 1, 
+
+                    "threads_per_core": 1
+
+                }, 
+
+                "ebs_optimized": false, 
+
+                "ena_support": true, 
+
+                "hypervisor": "xen", 
+
+                "image_id": "ami-c998b6b2", 
+
+                "instance_id": "i-0e9be42d21ead2e12", 
+
+                "instance_type": "t2.small", 
+
+                "key_name": "ocpkey", 
+
+                "launch_time": "2018-10-24T03:58:49+00:00", 
+
+                "monitoring": {
+
+                    "state": "disabled"
+
+                }, 
+
+                "network_interfaces": [
+
+                    {
+
+                        "association": {
+
+                            "ip_owner_id": "719622469867", 
+
+                            "public_dns_name": "ec2-34-233-241-24.compute-1.amazonaws.com", 
+
+                            "public_ip": "34.233.241.24"
+
+                        }, 
+
+                        "attachment": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "attachment_id": "eni-attach-0c668cb9b83acd3d1", 
+
+                            "delete_on_termination": true, 
+
+                            "device_index": 0, 
+
+                            "status": "attached"
+
+                        }, 
+
+                        "description": "", 
+
+                        "groups": [
+
+                            {
+
+                                "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                                "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                            }
+
+                        ], 
+
+                        "ipv6_addresses": [], 
+
+                        "mac_address": "02:7d:9b:83:64:a4", 
+
+                        "network_interface_id": "eni-0517046d37a1f67ae", 
+
+                        "owner_id": "719622469867", 
+
+                        "private_dns_name": "ip-192-199-0-201.ec2.internal", 
+
+                        "private_ip_address": "192.199.0.201", 
+
+                        "private_ip_addresses": [
+
+                            {
+
+                                "association": {
+
+                                    "ip_owner_id": "719622469867", 
+
+                                    "public_dns_name": "ec2-34-233-241-24.compute-1.amazonaws.com", 
+
+                                    "public_ip": "34.233.241.24"
+
+                                }, 
+
+                                "primary": true, 
+
+                                "private_dns_name": "ip-192-199-0-201.ec2.internal", 
+
+                                "private_ip_address": "192.199.0.201"
+
+                            }
+
+                        ], 
+
+                        "source_dest_check": true, 
+
+                        "status": "in-use", 
+
+                        "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                        "vpc_id": "vpc-0031d5c8cf211367b"
+
+                    }
+
+                ], 
+
+                "placement": {
+
+                    "availability_zone": "us-east-1a", 
+
+                    "group_name": "", 
+
+                    "tenancy": "default"
+
+                }, 
+
+                "private_dns_name": "ip-192-199-0-201.ec2.internal", 
+
+                "private_ip_address": "192.199.0.201", 
+
+                "product_codes": [], 
+
+                "public_dns_name": "ec2-34-233-241-24.compute-1.amazonaws.com", 
+
+                "public_ip_address": "34.233.241.24", 
+
+                "root_device_name": "/dev/sda1", 
+
+                "root_device_type": "ebs", 
+
+                "security_groups": [
+
+                    {
+
+                        "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                        "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                    }
+
+                ], 
+
+                "source_dest_check": true, 
+
+                "state": {
+
+                    "code": 16, 
+
+                    "name": "running"
+
+                }, 
+
+                "state_transition_reason": "", 
+
+                "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                "tags": {
+
+                    "AnsibleGroup": "apps", 
+
+                    "Name": "app1", 
+
+                    "Project": "three-tier-app-3f95", 
+
+                    "Stack": "project three-tier-app-3f95", 
+
+                    "aws:cloudformation:logical-id": "app1", 
+
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:719622469867:stack/three-tier-app-3f95/035fdba0-d741-11e8-b94e-500c28b27a35", 
+
+                    "aws:cloudformation:stack-name": "three-tier-app-3f95", 
+
+                    "instance_filter": "three-tier-app-psrivast@redhat.com", 
+
+                    "internaldns": "app1.3f95.internal", 
+
+                    "ostype": "rhel", 
+
+                    "owner": "psrivast@redhat.com", 
+
+                    "three-tier-app-3f95": "app"
+
+                }, 
+
+                "virtualization_type": "hvm", 
+
+                "vpc_id": "vpc-0031d5c8cf211367b"
+
+            }, 
+
+            {
+
+                "ami_launch_index": 0, 
+
+                "architecture": "x86_64", 
+
+                "block_device_mappings": [
+
+                    {
+
+                        "device_name": "/dev/sda1", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:52+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-0a5f5571b3bf0ece9"
+
+                        }
+
+                    }, 
+
+                    {
+
+                        "device_name": "/dev/xvdb", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:52+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-0232fa2a6a080c897"
+
+                        }
+
+                    }
+
+                ], 
+
+                "client_token": "three-basti-RK792KHBSDBN", 
+
+                "cpu_options": {
+
+                    "core_count": 2, 
+
+                    "threads_per_core": 1
+
+                }, 
+
+                "ebs_optimized": false, 
+
+                "ena_support": true, 
+
+                "hypervisor": "xen", 
+
+                "image_id": "ami-c998b6b2", 
+
+                "instance_id": "i-04978b8832ff2f7d2", 
+
+                "instance_type": "t2.medium", 
+
+                "key_name": "ocpkey", 
+
+                "launch_time": "2018-10-24T03:58:51+00:00", 
+
+                "monitoring": {
+
+                    "state": "disabled"
+
+                }, 
+
+                "network_interfaces": [
+
+                    {
+
+                        "association": {
+
+                            "ip_owner_id": "719622469867", 
+
+                            "public_dns_name": "ec2-100-24-96-193.compute-1.amazonaws.com", 
+
+                            "public_ip": "100.24.96.193"
+
+                        }, 
+
+                        "attachment": {
+
+                            "attach_time": "2018-10-24T03:58:51+00:00", 
+
+                            "attachment_id": "eni-attach-0b166198dae296692", 
+
+                            "delete_on_termination": true, 
+
+                            "device_index": 0, 
+
+                            "status": "attached"
+
+                        }, 
+
+                        "description": "", 
+
+                        "groups": [
+
+                            {
+
+                                "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                                "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                            }
+
+                        ], 
+
+                        "ipv6_addresses": [], 
+
+                        "mac_address": "02:10:28:ba:e2:d8", 
+
+                        "network_interface_id": "eni-086f2d10b306ffab5", 
+
+                        "owner_id": "719622469867", 
+
+                        "private_dns_name": "ip-192-199-0-99.ec2.internal", 
+
+                        "private_ip_address": "192.199.0.99", 
+
+                        "private_ip_addresses": [
+
+                            {
+
+                                "association": {
+
+                                    "ip_owner_id": "719622469867", 
+
+                                    "public_dns_name": "ec2-100-24-96-193.compute-1.amazonaws.com", 
+
+                                    "public_ip": "100.24.96.193"
+
+                                }, 
+
+                                "primary": true, 
+
+                                "private_dns_name": "ip-192-199-0-99.ec2.internal", 
+
+                                "private_ip_address": "192.199.0.99"
+
+                            }
+
+                        ], 
+
+                        "source_dest_check": true, 
+
+                        "status": "in-use", 
+
+                        "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                        "vpc_id": "vpc-0031d5c8cf211367b"
+
+                    }
+
+                ], 
+
+                "placement": {
+
+                    "availability_zone": "us-east-1a", 
+
+                    "group_name": "", 
+
+                    "tenancy": "default"
+
+                }, 
+
+                "private_dns_name": "ip-192-199-0-99.ec2.internal", 
+
+                "private_ip_address": "192.199.0.99", 
+
+                "product_codes": [], 
+
+                "public_dns_name": "ec2-100-24-96-193.compute-1.amazonaws.com", 
+
+                "public_ip_address": "100.24.96.193", 
+
+                "root_device_name": "/dev/sda1", 
+
+                "root_device_type": "ebs", 
+
+                "security_groups": [
+
+                    {
+
+                        "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                        "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                    }
+
+                ], 
+
+                "source_dest_check": true, 
+
+                "state": {
+
+                    "code": 16, 
+
+                    "name": "running"
+
+                }, 
+
+                "state_transition_reason": "", 
+
+                "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                "tags": {
+
+                    "AnsibleGroup": "bastions", 
+
+                    "Name": "bastion", 
+
+                    "Project": "three-tier-app-3f95", 
+
+                    "Stack": "project three-tier-app-3f95", 
+
+                    "aws:cloudformation:logical-id": "bastion1", 
+
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:719622469867:stack/three-tier-app-3f95/035fdba0-d741-11e8-b94e-500c28b27a35", 
+
+                    "aws:cloudformation:stack-name": "three-tier-app-3f95", 
+
+                    "instance_filter": "three-tier-app-psrivast@redhat.com", 
+
+                    "internaldns": "bastion.3f95.internal", 
+
+                    "ostype": "linux", 
+
+                    "owner": "psrivast@redhat.com", 
+
+                    "three-tier-app-3f95": "bastion"
+
+                }, 
+
+                "virtualization_type": "hvm", 
+
+                "vpc_id": "vpc-0031d5c8cf211367b"
+
+            }, 
+
+            {
+
+                "ami_launch_index": 0, 
+
+                "architecture": "x86_64", 
+
+                "block_device_mappings": [
+
+                    {
+
+                        "device_name": "/dev/sda1", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:51+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-081ff5273f05f7581"
+
+                        }
+
+                    }, 
+
+                    {
+
+                        "device_name": "/dev/xvdb", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:51+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-00025e23132245013"
+
+                        }
+
+                    }
+
+                ], 
+
+                "client_token": "three-front-CJGURBR2E9EA", 
+
+                "cpu_options": {
+
+                    "core_count": 1, 
+
+                    "threads_per_core": 1
+
+                }, 
+
+                "ebs_optimized": false, 
+
+                "ena_support": true, 
+
+                "hypervisor": "xen", 
+
+                "image_id": "ami-c998b6b2", 
+
+                "instance_id": "i-0b9b04b3079713e0e", 
+
+                "instance_type": "t2.small", 
+
+                "key_name": "ocpkey", 
+
+                "launch_time": "2018-10-24T03:58:50+00:00", 
+
+                "monitoring": {
+
+                    "state": "disabled"
+
+                }, 
+
+                "network_interfaces": [
+
+                    {
+
+                        "association": {
+
+                            "ip_owner_id": "719622469867", 
+
+                            "public_dns_name": "ec2-100-24-181-50.compute-1.amazonaws.com", 
+
+                            "public_ip": "100.24.181.50"
+
+                        }, 
+
+                        "attachment": {
+
+                            "attach_time": "2018-10-24T03:58:50+00:00", 
+
+                            "attachment_id": "eni-attach-08ec9ea1d915057e1", 
+
+                            "delete_on_termination": true, 
+
+                            "device_index": 0, 
+
+                            "status": "attached"
+
+                        }, 
+
+                        "description": "", 
+
+                        "groups": [
+
+                            {
+
+                                "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                                "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                            }
+
+                        ], 
+
+                        "ipv6_addresses": [], 
+
+                        "mac_address": "02:c1:60:81:fe:fe", 
+
+                        "network_interface_id": "eni-0611bf669dd0f22d1", 
+
+                        "owner_id": "719622469867", 
+
+                        "private_dns_name": "ip-192-199-0-132.ec2.internal", 
+
+                        "private_ip_address": "192.199.0.132", 
+
+                        "private_ip_addresses": [
+
+                            {
+
+                                "association": {
+
+                                    "ip_owner_id": "719622469867", 
+
+                                    "public_dns_name": "ec2-100-24-181-50.compute-1.amazonaws.com", 
+
+                                    "public_ip": "100.24.181.50"
+
+                                }, 
+
+                                "primary": true, 
+
+                                "private_dns_name": "ip-192-199-0-132.ec2.internal", 
+
+                                "private_ip_address": "192.199.0.132"
+
+                            }
+
+                        ], 
+
+                        "source_dest_check": true, 
+
+                        "status": "in-use", 
+
+                        "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                        "vpc_id": "vpc-0031d5c8cf211367b"
+
+                    }
+
+                ], 
+
+                "placement": {
+
+                    "availability_zone": "us-east-1a", 
+
+                    "group_name": "", 
+
+                    "tenancy": "default"
+
+                }, 
+
+                "private_dns_name": "ip-192-199-0-132.ec2.internal", 
+
+                "private_ip_address": "192.199.0.132", 
+
+                "product_codes": [], 
+
+                "public_dns_name": "ec2-100-24-181-50.compute-1.amazonaws.com", 
+
+                "public_ip_address": "100.24.181.50", 
+
+                "root_device_name": "/dev/sda1", 
+
+                "root_device_type": "ebs", 
+
+                "security_groups": [
+
+                    {
+
+                        "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                        "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                    }
+
+                ], 
+
+                "source_dest_check": true, 
+
+                "state": {
+
+                    "code": 16, 
+
+                    "name": "running"
+
+                }, 
+
+                "state_transition_reason": "", 
+
+                "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                "tags": {
+
+                    "AnsibleGroup": "frontends", 
+
+                    "Name": "frontend1", 
+
+                    "Project": "three-tier-app-3f95", 
+
+                    "Stack": "project three-tier-app-3f95", 
+
+                    "aws:cloudformation:logical-id": "frontend1", 
+
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:719622469867:stack/three-tier-app-3f95/035fdba0-d741-11e8-b94e-500c28b27a35", 
+
+                    "aws:cloudformation:stack-name": "three-tier-app-3f95", 
+
+                    "instance_filter": "three-tier-app-psrivast@redhat.com", 
+
+                    "internaldns": "frontend1.3f95.internal", 
+
+                    "ostype": "linux", 
+
+                    "owner": "psrivast@redhat.com", 
+
+                    "three-tier-app-3f95": "frontend"
+
+                }, 
+
+                "virtualization_type": "hvm", 
+
+                "vpc_id": "vpc-0031d5c8cf211367b"
+
+            }, 
+
+            {
+
+                "ami_launch_index": 0, 
+
+                "architecture": "x86_64", 
+
+                "block_device_mappings": [
+
+                    {
+
+                        "device_name": "/dev/sda1", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-053652481eea027f8"
+
+                        }
+
+                    }, 
+
+                    {
+
+                        "device_name": "/dev/xvdb", 
+
+                        "ebs": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "delete_on_termination": true, 
+
+                            "status": "attached", 
+
+                            "volume_id": "vol-05c637d24d9413572"
+
+                        }
+
+                    }
+
+                ], 
+
+                "client_token": "three-app2-DB9ZJ75DQ9OC", 
+
+                "cpu_options": {
+
+                    "core_count": 1, 
+
+                    "threads_per_core": 1
+
+                }, 
+
+                "ebs_optimized": false, 
+
+                "ena_support": true, 
+
+                "hypervisor": "xen", 
+
+                "image_id": "ami-c998b6b2", 
+
+                "instance_id": "i-09b5c08760ef894af", 
+
+                "instance_type": "t2.small", 
+
+                "key_name": "ocpkey", 
+
+                "launch_time": "2018-10-24T03:58:49+00:00", 
+
+                "monitoring": {
+
+                    "state": "disabled"
+
+                }, 
+
+                "network_interfaces": [
+
+                    {
+
+                        "association": {
+
+                            "ip_owner_id": "719622469867", 
+
+                            "public_dns_name": "ec2-34-192-168-72.compute-1.amazonaws.com", 
+
+                            "public_ip": "34.192.168.72"
+
+                        }, 
+
+                        "attachment": {
+
+                            "attach_time": "2018-10-24T03:58:49+00:00", 
+
+                            "attachment_id": "eni-attach-066b0392939c84258", 
+
+                            "delete_on_termination": true, 
+
+                            "device_index": 0, 
+
+                            "status": "attached"
+
+                        }, 
+
+                        "description": "", 
+
+                        "groups": [
+
+                            {
+
+                                "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                                "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                            }
+
+                        ], 
+
+                        "ipv6_addresses": [], 
+
+                        "mac_address": "02:8d:a0:96:f6:78", 
+
+                        "network_interface_id": "eni-0d338c7063d4e4783", 
+
+                        "owner_id": "719622469867", 
+
+                        "private_dns_name": "ip-192-199-0-55.ec2.internal", 
+
+                        "private_ip_address": "192.199.0.55", 
+
+                        "private_ip_addresses": [
+
+                            {
+
+                                "association": {
+
+                                    "ip_owner_id": "719622469867", 
+
+                                    "public_dns_name": "ec2-34-192-168-72.compute-1.amazonaws.com", 
+
+                                    "public_ip": "34.192.168.72"
+
+                                }, 
+
+                                "primary": true, 
+
+                                "private_dns_name": "ip-192-199-0-55.ec2.internal", 
+
+                                "private_ip_address": "192.199.0.55"
+
+                            }
+
+                        ], 
+
+                        "source_dest_check": true, 
+
+                        "status": "in-use", 
+
+                        "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                        "vpc_id": "vpc-0031d5c8cf211367b"
+
+                    }
+
+                ], 
+
+                "placement": {
+
+                    "availability_zone": "us-east-1a", 
+
+                    "group_name": "", 
+
+                    "tenancy": "default"
+
+                }, 
+
+                "private_dns_name": "ip-192-199-0-55.ec2.internal", 
+
+                "private_ip_address": "192.199.0.55", 
+
+                "product_codes": [], 
+
+                "public_dns_name": "ec2-34-192-168-72.compute-1.amazonaws.com", 
+
+                "public_ip_address": "34.192.168.72", 
+
+                "root_device_name": "/dev/sda1", 
+
+                "root_device_type": "ebs", 
+
+                "security_groups": [
+
+                    {
+
+                        "group_id": "sg-012e5fd9b8ea8d81a", 
+
+                        "group_name": "three-tier-app-3f95-HostSG-CFRNAH6ZDACC"
+
+                    }
+
+                ], 
+
+                "source_dest_check": true, 
+
+                "state": {
+
+                    "code": 16, 
+
+                    "name": "running"
+
+                }, 
+
+                "state_transition_reason": "", 
+
+                "subnet_id": "subnet-044b0de48abee9a7e", 
+
+                "tags": {
+
+                    "AnsibleGroup": "apps", 
+
+                    "Name": "app2", 
+
+                    "Project": "three-tier-app-3f95", 
+
+                    "Stack": "project three-tier-app-3f95", 
+
+                    "aws:cloudformation:logical-id": "app2", 
+
+                    "aws:cloudformation:stack-id": "arn:aws:cloudformation:us-east-1:719622469867:stack/three-tier-app-3f95/035fdba0-d741-11e8-b94e-500c28b27a35", 
+
+                    "aws:cloudformation:stack-name": "three-tier-app-3f95", 
+
+                    "instance_filter": "three-tier-app-psrivast@redhat.com", 
+
+                    "internaldns": "app2.3f95.internal", 
+
+                    "ostype": "rhel", 
+
+                    "owner": "psrivast@redhat.com", 
+
+                    "three-tier-app-3f95": "app"
+
+                }, 
+
+                "virtualization_type": "hvm", 
+
+                "vpc_id": "vpc-0031d5c8cf211367b"
+
+            }
+
+        ]
+
+    }
